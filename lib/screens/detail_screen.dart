@@ -18,7 +18,17 @@ class DetailScreen extends StatelessWidget {
               title: Text(recipe.title),
               background : Hero(
                 tag: recipe.id, 
-                child: Image.network(recipe.imageUrl, fit: BoxFit.cover,),
+                child: Image.network(
+                  recipe.imageUrl,
+                  fit: BoxFit.cover,
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) return child;
+                    return const Center(child: CircularProgressIndicator());
+                  },
+                  errorBuilder: (context, error, stackTrace) => const Center(
+                    child: Icon(Icons.broken_image, size: 56),
+                  ),
+                ),
                 ),
             ),
 

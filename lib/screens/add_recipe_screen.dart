@@ -48,7 +48,10 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || value.isEmpty) return 'Indiquez le temps';
-                  if (int.tryParse(value) == null) return 'Entrez un nombre valide';
+                  final duration = int.tryParse(value);
+                  if (duration == null || duration <= 0) {
+                    return 'Entrez une durée positive valide';
+                  }
                   return null;
                 },
                 onSaved: (val) => _duration = val!,
