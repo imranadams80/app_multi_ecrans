@@ -58,4 +58,18 @@ flutter run
 
 ## Captures d'écran
 
-Ajoutez ici des captures de l'écran d'accueil, de l'écran de détail, du formulaire et des paramètres avant la livraison finale.
+### Accueil
+
+![Écran d'accueil](screenshots/ecran%20d%27accueil.jpeg)
+
+### Détail
+
+![Écran de détail](screenshots/ecran%20de%20detail.jpeg)
+
+### Formulaire d'ajout
+
+![Formulaire d'ajout](screenshots/Formulaire%20d%27ajout.jpeg)
+
+### Paramètres
+
+![Écran des paramètres](screenshots/ecran%20des%20parametres.jpeg)
